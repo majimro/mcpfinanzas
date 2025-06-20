@@ -2,7 +2,7 @@ package dev.sye.mcpfinanzas;
 
 public class Contstantes {
     
-    public static final String API_KEY = "de4059aabd2ef593597b40d936205f";
+    public static final String API_KEY = "<token>";
     public static final String URL_BASE = "https://api.databursatil.com/v1";
     public static final String NEWS_URL = URL_BASE + "/noticias?token=" + API_KEY;
     public static final String DIVISAS_URL = URL_BASE + "/divisas?token=" + API_KEY;

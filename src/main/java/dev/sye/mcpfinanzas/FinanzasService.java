@@ -32,7 +32,7 @@ public class FinanzasService {
     @Tool(name = "mcp_get_cotizaciones", description = "Obtiene las cotizaciones de una emisora")
     public String getCotizaciones(String emisora) {
         logger.info("Obteniendo cotizaciones de {}", emisora);
-        String fooResourceUrl = Contstantes.COTIZACIONES_URL + "emisora_serie=" + emisora + "&bolsa=BMV&concepto=U,P,A,X,N,C,M,V,O,I,F";
+        String fooResourceUrl = Contstantes.COTIZACIONES_URL + "emisora_serie=" + emisora + "*" + "&bolsa=BMV&concepto=U,P,A,X,N,C,M,V,O,I,F";
         String cotizaciones = restTemplate.getForObject(fooResourceUrl, String.class);
         return Contstantes.ESTRUCTURA_COTIZACIONES + cotizaciones;
     }
